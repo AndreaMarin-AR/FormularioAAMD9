@@ -5,6 +5,7 @@ $data=unserialize($data);
 <html>
 <head>
 	<title>Lista de Frutas</title>
+	<link rel="stylesheet" type="text/css" href="kiwi.css">
 <script type="text/javascript">
 	function eliminar(id) {
 		if (confirm("Seguro desea eliminar el registro?")) {
@@ -14,7 +15,7 @@ $data=unserialize($data);
 </script>
 </head>
 <body>
-<table align="center">
+<table class="content" align="center">
 <a href="../inicio.php">Inicio</a>
 <center><a href="FrutasControlador.php?operacion=registrar">Registrar</a></center>
 	<tr><th>Nro</th><th>Nombre</th><th>Sabor</th><th>Color</th><th>Origen</th><th>Opciones</th></tr>
@@ -37,3 +38,10 @@ $data=unserialize($data);
 </table>
 </body>
 </html>	
+
+
+
+
+
+
+
