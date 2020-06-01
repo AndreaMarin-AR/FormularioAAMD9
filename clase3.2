@@ -1,0 +1,30 @@
+<?php
+abstract class Modelo{
+
+	protected $server = null;
+	protected $bd = null;
+	protected $usr = null;
+	protected $pass = null;
+
+
+	public function __construct() {
+		$this->server = SERVERDB;
+		$this->bd = DB;
+		$this->usr = USUDB;
+		$this->pass = CLAVEUSUDB;
+	}
+
+	public function conectarBD(){
+		$conn = new mysqli($this->server, $this->usr, $this->pass, $this->bd);
+		if (mysqli_connect_errno()){
+			printf("Falló la conexion: %s\n", mysqli_connect_error());
+			exit();
+		}
+		return $conn;
+	}
+
+	public function desconectarBD($mysqli){
+		$mysqli->close();
+	}
+}
+?>
