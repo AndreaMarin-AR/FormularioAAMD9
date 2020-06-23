@@ -1,0 +1,31 @@
+Iniciando con la explicación, se muestra la imagen donde es reflejado la función de un modelo donde se manejan las acciones que se generan en un modulo especifico
+
+En la  línea 9: $db=new clasedb(); se está llamando a la clase para así tener conexión con la base de datos, el cual es clasedb();
+
+En la línea 10: $conex=$db->conectar(); se realiza una solicitud de la clase que se llamo en la primera línea, y se llama a uno de los métodos de la clase que hace la solicitud de la conexión para poder utilizar los parámetros de mysql.
+
+En la línea 12: $sql="SELECT * FROM datos_personales"; es realizada la consulta a la base de datos, en éste caso sería a la tabla datos_personales;
+
+En la línea 14: $res=mysqli_query($conex,$sql); está vez se consulta en mysqli para realizar la búsqueda en la base de datos;
+
+En la línea 15: $campos=mysqli_num_fields($res); se utiliza la función mysqli_num_fields() en la que se verificará la cantidad de campos que posee la tabla;
+
+En la línea 16: $filas=mysqli_num_rows($res); se comprueba la cantidad de filas que va a tener la consulta en la  función mysqli_num_rows();
+
+En la linea 17: $i=0; se declara la variable a contar $i=0 y se usará para ir hacia el array de datos de la consulta;
+
+En la línea 18: $datos[]=array(); se declara una variable de array, en la cual se le integrarán los datos de dicha consulta;
+
+En la línea 20: while($data=mysqli_fetch_array($res)){ se utilza el bucle while() para recorrer los datos de tal consulta, dentro de está se utiliza la función de mysqli_fetch_array($res) para recorrer hacia el bucle while, y así hasta ser finalizado los datos en dicha tabla.
+
+En la línea 21: for ($j=0; $j <$campos ; $j++) { se puede notar el uso de dos bucles, la función del for() dentro del while(), los datos se muestran en forma de tabla para así al momento de imprimir los datos, estos esten ya más definidos para no recorrer de nuevo el mismo array.
+
+En la línea 22: $datos[$i][$j]=$data[$j];}el array es copiado en formato matriz para generar en contexto lo que se realizo anteriormente, es decir, se trabajan los datos en forma de tabla.
+
+En la línea 24: $i++; agregamos un contador de +1, para que el bucle while no tenga problemas al momento de realizar su función;
+
+En la línea 26: mysqli_close($conex); se cierra la conexión con la función;
+
+En la línea 28: header("Location: index.php?filas=".$filas=."&campos=".$campos."$data=".serialize($datos)); es usado el método de redireccionamiento header() de la misma forma el lugar a donde será redireccionado, así como también las variables de cantidad de filas, columnas y el array(arreglo) para usarlo en el index.php, con todo esto poder imprimir los datos.
+
+
