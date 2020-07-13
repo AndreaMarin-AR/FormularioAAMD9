@@ -1,4 +1,4 @@
-<!---- Ejercicio 1 suma de dos números------------>
+<!----Suma simple de dos números------------>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +14,7 @@ echo "la suma de 5 y 10 es: $numero<br>";
 ?>
 </div>
 
-<!-- Ejercico 2 cadena mayor a 20 caracteres, quitando los 3 primeros, y los ultimos 5 -->
+<!----------cadena mayor a 20 caracteres, quitando los 3 primeros, y los ultimos 5-------->
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +34,7 @@ echo "Cadena Substraida: $ultimos";
 </body>
 </html>
 
-<!-- Ejercicio 3Últimos 10 caracteres de la cadena -->
+<!-----Últimos 10 caracteres de la cadena--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +55,7 @@ echo "Cadena Substraida: $ultimos";
 </html>
 
 
-<!-- Ejercicio 3 - 10 caracteres restantes después de quitarle los primeros 5 de la cadena -->
+<!-------10 caracteres restantes después de quitarle los primeros 5 de la cadena-------->
 <!DOCTYPE html>
 <html>
 <head>
