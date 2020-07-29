@@ -1,12 +1,9 @@
-<?php 
-
- class clasedb{
- 	private $db;
- 	public function conectar(){
- 		$this->db= new mysqli("localhost","root", "" ,"condominio") or die ("No se pudo conectar con Mysql");
-
- 		return $this->db;
- 	}
-
- 	}
- ?>
+<?php
+    class conexion{
+        private $db;
+        public function conectar()
+        {
+            $this->db=new mysqli("localhost","root","","condominio") or die ("La conexion con la base de datos no fue posible");
+        return $this->db;
+        }
+    }
